@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private Button button;
     private Button button2;
+    private Button button3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
 
         someActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -77,6 +80,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 cameraResultLauncher.launch(intent);
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
